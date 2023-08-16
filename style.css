@@ -18,8 +18,8 @@
 .navcontainer {
   display: flex;
   justify-content: space-between;
-  width: 960px;
-  margin: auto;
+  margin-left: 14px;
+  margin-right: 14px;
 }
 .my {
   color: var(--white);
@@ -27,64 +27,38 @@
   font-weight: 700;
 }
 .list {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  gap: 46px;
-  margin-right: 94px;
-}
-.item {
-  color: var(--white);
-  font-size: 18px;
-  font-weight: 400;
-}
-a:link {
-  text-decoration: none;
-  color: var(--white);
-  font-size: 18px;
-  font-weight: 400;
-}
-a:visited {
-  text-decoration: none;
-  color: var(--white);
-  font-size: 18px;
-  font-weight: 400;
-}
-.disabled {
-  text-decoration: none;
-  color: var(--white);
-  font-size: 18px;
-  font-weight: 400;
-  cursor: not-allowed;
-  pointer-events: none;
+  display: none;
 }
 .header {
-  /* height: 100vh; */
   margin: 0 auto;
   position: relative;
   color: transparent;
-  background-image: url(background.png);
+  background-image: url(background2.png);
   background-size: cover;
   height: calc(100vh - 50px);
 }
+
 .headerContainer {
-  width: 960px;
+  margin-left: 14px;
+  margin-right: 14px;
   position: relative;
   z-index: 20;
   color: var(--white);
   font-weight: 700;
-  margin: 0 auto;
 }
+
 .bigheadertext {
   font-size: 36px;
   display: inline-block;
   margin-top: 30vh;
 }
+
 .smallheadertext {
   font-size: 18px;
   margin-top: 62px;
   margin-bottom: 42px;
 }
+
 .btnOfert {
   border: 3px solid white;
   width: 164px;
@@ -94,41 +68,43 @@ a:visited {
   color: var(--white);
   transition: background-color 1s ease, color 1s ease;
 }
-.btnOfert:hover {
-  background-color: var(--white);
-  color: var(--tundora);
-}
 .specialists {
-  width: 960px;
-  margin: 0 auto;
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   gap: 40px;
-}
-.specialists {
-  margin-top: 51px;
+  width: 100%;
+  margin-top: 34px;
   margin-bottom: 68px;
 }
+
 .heading {
   font-size: 36px;
   font-weight: 700;
   line-height: 42px;
   text-align: left;
+  margin: 0 auto;
 }
+
 .specialistone {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   gap: 60px;
+  margin-left: 14px;
+  margin-right: 14px;
 }
+
 .fotoone {
   width: 221px;
   height: 221px;
   border-radius: 50%;
-
   background-image: url(osoba1.jpg);
   background-size: cover;
 }
+
 .name {
   font-size: 18px;
   font-weight: 700;
@@ -138,36 +114,49 @@ a:visited {
   display: flex;
   align-items: center;
 }
+
 .description {
   font-size: 18px;
   font-weight: 400;
   line-height: 21px;
   letter-spacing: 0em;
-  text-align: left;
+  margin-top: 20px;
+  text-align: justify;
 }
+
 .order {
   width: 70%;
   display: flex;
   flex-wrap: wrap;
 }
+
 .specialisttwo {
   display: flex;
   justify-content: space-between;
   gap: 60px;
+  margin-top: 54px;
+  margin-left: 14px;
+  margin-right: 14px;
+
+  flex-direction: column;
+  align-items: center;
 }
+
 .fototwo {
+  order: -1;
   width: 221px;
   height: 221px;
   border-radius: 50%;
   background-image: url(osoba2.png);
   background-size: cover;
 }
+
 .orderTwo {
   width: 70%;
   display: flex;
   flex-wrap: wrap;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .descriptionTwo {
@@ -175,24 +164,27 @@ a:visited {
   font-weight: 400;
   line-height: 21px;
   letter-spacing: 0em;
-  text-align: right;
+  margin-top: 20px;
+  text-align: justify;
 }
-
 .offer {
   background-color: #405d78;
-  margin: 0 auto;
   position: relative;
+  width: 100%;
 }
+
 .containerOffer {
-  width: 960px;
   padding-top: 50px;
   padding-bottom: 64.17px;
-  margin: auto;
+  margin-left: 14px;
+  margin-right: 14px;
 }
+
 .headerServices {
   font-weight: 700;
-  font-size: 36px;
   color: var(--white);
+  font-size: 26px;
+  text-align: center;
 }
 
 .containerServices {
@@ -203,6 +195,7 @@ a:visited {
   justify-content: center;
   align-items: center;
   padding-top: 81.67px;
+  flex-direction: column;
 }
 
 .service {
@@ -220,15 +213,13 @@ a:visited {
   transition: transform 0.3s ease;
 }
 
-.service:hover {
-  transform: scale(1.05);
-}
 .novelty {
   display: block;
   margin: 0 auto;
   font-size: 18px;
   font-weight: 400;
 }
+
 .dot {
   background-color: var(--orange);
   border-radius: 50%;
@@ -242,25 +233,224 @@ a:visited {
 
 .footer {
   background-color: var(--tundora);
-  height: 71px;
+  margin: auto;
   display: flex;
+  height: 147px;
   align-items: center;
 }
+
 .footerContainer {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: center;
   width: 960px;
   margin: 0 auto;
+  flex-direction: column;
+  margin-left: 14px;
+  margin-right: 14px;
 }
+
 .footerText {
   font-size: 18px;
   font-weight: 700;
   color: var(--white);
 }
+
 .instface {
   color: var(--white);
   display: flex;
   gap: 18px;
   flex-wrap: wrap;
   align-content: center;
+  height: 31px;
+  margin: 0 auto;
+  padding-top: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .navcontainer {
+    width: 700px;
+    margin: 0 auto;
+  }
+
+  .list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 46px;
+  }
+
+  .item {
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  a:link {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  a:visited {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .disabled {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 400;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  .headerContainer {
+    width: 700px;
+    margin: 0 auto;
+  }
+
+  .btnOfert:hover {
+    background-color: var(--white);
+    color: var(--tundora);
+  }
+
+  .specialists {
+    width: 700px;
+    margin: auto;
+    margin-top: 51px;
+    margin-bottom: 51px;
+  }
+
+  .heading {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 42px;
+    text-align: left;
+    margin: initial;
+  }
+
+  .specialistone {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 0px;
+    margin-right: 0px;
+    gap: 40px;
+  }
+  .fotoone {
+    height: 190px;
+    width: 190px;
+  }
+
+  .description {
+    text-align: left;
+  }
+
+  .specialisttwo {
+    margin-left: 0px;
+    margin-right: 0px;
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .fototwo {
+    height: 190px;
+    width: 190px;
+    order: 0;
+  }
+
+  .orderTwo {
+    justify-content: flex-end;
+  }
+
+  .descriptionTwo {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: right;
+  }
+
+  .containerOffer {
+    width: 700px;
+    margin: 0 auto;
+  }
+  .headerServices {
+    font-size: 36px;
+    text-align: start;
+  }
+
+  .containerServices {
+    flex-direction: row;
+  }
+
+  .service:hover {
+    transform: scale(1.05);
+  }
+
+  .footer {
+    height: 71px;
+  }
+
+  .footerContainer {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 700px;
+    margin: 0 auto;
+  }
+
+  .instface {
+    height: 0px;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .navcontainer {
+    width: 960px;
+  }
+
+  .headerContainer {
+    width: 960px;
+  }
+
+  .specialists {
+    width: 960px;
+  }
+
+  .specialistone {
+    gap: 60px;
+  }
+
+  .description {
+    text-align: left;
+  }
+  .fotoone {
+    height: 221px;
+    width: 221px;
+  }
+
+  .specialisttwo {
+    gap: 60px;
+    margin-top: 0px;
+  }
+
+  .fototwo {
+    order: 0;
+    height: 221px;
+    width: 221px;
+  }
+
+  .containerOffer {
+    width: 960px;
+  }
+
+  .footerContainer {
+    width: 960px;
+  }
 }

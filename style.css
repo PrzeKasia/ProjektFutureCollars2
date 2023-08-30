@@ -18,7 +18,7 @@ html {
   display: flex;
   align-items: center;
 }
-.navcontainer {
+.navContainer {
   display: flex;
   justify-content: space-between;
   margin-left: 14px;
@@ -33,12 +33,6 @@ html {
   display: none;
 }
 
-a:visited {
-  text-decoration: none;
-}
-a:link {
-  text-decoration: none;
-}
 .header {
   margin: 0 auto;
   position: relative;
@@ -57,13 +51,14 @@ a:link {
   font-weight: 700;
 }
 
-.bigheadertext {
+.bigHeaderText {
+  width: 65%;
   font-size: 36px;
   display: inline-block;
   margin-top: 30vh;
 }
 
-.smallheadertext {
+.smallHeaderText {
   font-size: 18px;
   margin-top: 62px;
   margin-bottom: 42px;
@@ -71,24 +66,23 @@ a:link {
 
 .btnOfert {
   border: 3px solid white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 164px;
   height: 40px;
   font-size: 18px;
+  font-weight: 700;
   background-color: transparent;
   color: var(--white);
+  display: flex;
+  align-content: space-around;
+  justify-content: space-around;
+  flex-wrap: wrap;
   transition: background-color 1s ease, color 1s ease;
 }
 
 .specialists {
-  position: relative;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   gap: 40px;
-  width: 100%;
   margin-top: 34px;
   margin-bottom: 68px;
 }
@@ -97,7 +91,6 @@ a:link {
   font-size: 36px;
   font-weight: 700;
   line-height: 42px;
-  text-align: left;
   margin: 0 auto;
 }
 
@@ -111,7 +104,7 @@ a:link {
   margin-right: 14px;
 }
 
-.fotoone {
+.fotoOne {
   width: 221px;
   height: 221px;
   border-radius: 50%;
@@ -151,12 +144,11 @@ a:link {
   margin-top: 54px;
   margin-left: 14px;
   margin-right: 14px;
-
   flex-direction: column;
   align-items: center;
 }
 
-.fototwo {
+.fotoTwo {
   order: -1;
   width: 221px;
   height: 221px;
@@ -169,7 +161,6 @@ a:link {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  display: flex;
   justify-content: flex-start;
 }
 
@@ -284,7 +275,7 @@ a:link {
 }
 
 @media screen and (min-width: 768px) {
-  .navcontainer {
+  .container {
     width: 700px;
     margin: 0 auto;
   }
@@ -292,7 +283,6 @@ a:link {
   .list {
     list-style-type: none;
     display: flex;
-    flex-direction: row;
     gap: 46px;
   }
 
@@ -303,45 +293,35 @@ a:link {
     cursor: not-allowed;
   }
 
-  a:link {
-    color: var(--white);
-    font-size: 18px;
-    font-weight: 400;
-  }
-
-  a:visited {
+  a:link,
+  a:visited,
+  .disabled {
+    text-decoration: none;
     color: var(--white);
     font-size: 18px;
     font-weight: 400;
   }
 
   .disabled {
-    text-decoration: none;
-    color: var(--white);
-    font-size: 18px;
-    font-weight: 400;
-    pointer-events: none;
+    cursor: not-allowed;
   }
 
-  .headerContainer {
-    width: 700px;
-    margin: 0 auto;
+  .btnOfert:hover {
+    background-color: var(--white);
+    color: var(--tundora);
   }
 
   .specialists {
-    width: 700px;
-    margin: auto;
+    gap: 40px;
     margin-top: 51px;
     margin-bottom: 51px;
   }
 
   .heading {
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 42px;
     text-align: left;
     margin: initial;
   }
+
   .order:nth-last-of-type(odd) {
     width: 70%;
   }
@@ -353,7 +333,8 @@ a:link {
     margin-right: 0px;
     gap: 40px;
   }
-  .fotoone {
+
+  .fotoOne {
     height: 190px;
     width: 190px;
   }
@@ -369,7 +350,7 @@ a:link {
     gap: 40px;
   }
 
-  .fototwo {
+  .fotoTwo {
     height: 190px;
     width: 190px;
     order: 0;
@@ -388,10 +369,6 @@ a:link {
     text-align: right;
   }
 
-  .containerOffer {
-    width: 700px;
-    margin: 0 auto;
-  }
   .headerServices {
     font-size: 36px;
     text-align: start;
@@ -411,9 +388,6 @@ a:link {
 
   .footerContainer {
     flex-direction: row;
-    justify-content: space-between;
-    width: 700px;
-    margin: 0 auto;
   }
 
   .instface {
@@ -423,15 +397,7 @@ a:link {
 }
 
 @media screen and (min-width: 1200px) {
-  .navcontainer {
-    width: 960px;
-  }
-
-  .headerContainer {
-    width: 960px;
-  }
-
-  .specialists {
+  .container {
     width: 960px;
   }
 
@@ -442,7 +408,8 @@ a:link {
   .description:nth-last-of-type(odd) {
     text-align: left;
   }
-  .fotoone {
+
+  .fotoOne {
     height: 221px;
     width: 221px;
   }
@@ -452,21 +419,14 @@ a:link {
     margin-top: 0px;
   }
 
-  .fototwo {
+  .fotoTwo {
     order: 0;
     height: 221px;
     width: 221px;
   }
 
-  .containerOffer {
-    width: 960px;
-  }
   .service {
     width: 198px;
     height: 193.78px;
-  }
-
-  .footerContainer {
-    width: 960px;
   }
 }
